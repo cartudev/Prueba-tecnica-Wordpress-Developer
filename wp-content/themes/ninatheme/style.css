@@ -1,0 +1,438 @@
+/*!
+Theme Name:   Nina-theme
+Theme URI:    https://github.com/cartudev
+Template: storefront
+Author:       Cartudev
+Author URI:   https://cartudev.github.io/
+Description:  Nina-theme is a child theme
+Version:      0.5.0
+Tested up to: 6.3
+Requires PHP: 5.6.0
+License:      GNU General Public License v3 or later
+License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain:  Ninastore
+Tags:         e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
+
+
+ *
+ */
+*{
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+
+}
+body{
+  background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6, div, p{
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+h1{
+  font-size: 3.5em;
+  font-weight: bold;
+}
+h2{
+  font-weight: bold;
+  font-size: 2.5em;
+}
+div{
+  font-weight: bold;
+  font-size: 1rem;
+}
+.menu-principal{
+    display: flex;
+    list-style: none;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+.menu-principal a, .menu-footer a{
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+
+    text-transform: uppercase;
+}
+.sub-menu{
+  display: none;
+}
+.header-container{
+  height: 96px;
+  width: 100%;
+  position: fixed;
+  top:0;
+  z-index: 10;
+  background-color: black;
+  display: flex;
+  align-items: center;
+}
+.header-container--leftside {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    max-width: 850px;
+    justify-content: flex-start;
+
+}
+.header-container--rightside {
+display: flex;
+    flex: none;
+    width: auto;
+    min-width: 200px;
+    justify-content: flex-end;
+    flex-grow: 1;
+  margin-right: 15px;
+}
+.header-logo-container{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    height: fit-content;
+    justify-content: space-around;
+    max-width: 26%;
+    min-width: 160px;
+}
+.nav-container{
+width: 100%;
+}
+/*
+.woocommerce-product-search{
+} */
+
+
+
+.woocommerce-product-search .search-field{
+  border: 0;
+  border-bottom: 1px white solid;
+  padding: 0 8px;
+  color: #fff;
+  font-family: monospace sans-serif;
+  transition: ease-in-out 1.5s all;
+  background-color: #0000;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin: 0 0px;
+}
+
+
+.woocommerce-product-search .search-field:focus{
+  outline: none;
+  background-color: #fff1;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-button--container{
+  background-color: #0000;
+  border: none;
+  flex: 1 1 auto;
+  margin: 0 10px;
+}
+.woocommerce-product-search{
+  display: flex;
+}
+
+.search-button--user{
+  background-color: #0000;
+  border: none;
+  flex: 1 1 auto;
+  margin: 0 10px;
+}
+
+.nav-secondary-menu ul {
+    display: flex;
+    background-color: #0000;
+    border: none;
+    justify-content: center;
+    list-style-type: none;
+
+}
+.container{
+  margin-top: 96px;
+  background-color: #fff;
+  ;
+}
+
+
+.footer-container{
+  width: 100%;
+  height: auto;
+  background-color:#000 ;
+}
+.footer-top--container{
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-column{
+      display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: max-content;
+    color: #fff;
+} 
+.footer-line{
+  width: 80%;
+  background-color: #fff;
+  height: 1px;
+  display: flex;
+  margin: 0 auto;
+}
+.footer-bottom--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-bottom--container p{
+  padding: 22px;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  
+}
+
+.menu-footer {
+  min-width: 112%;
+  width: 112%;
+  margin: 0 20px;
+
+  list-style-type: disclosure-closed;
+  list-style-position: outside;
+  color: #fff;
+}
+.menu-footer li{
+    float: left;
+    width: 50%;
+    margin: 20px 0;
+}
+.social-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 86px;
+}
+.social-icons{
+  width: 150px;
+  display: flex;
+}
+
+.social-icons a{
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+
+}
+
+
+
+
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 96px;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s linear;
+    transition: opacity 0.3s linear;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #ffffff80;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #fff;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+.column-gallery{
+  width: 100%;
+  max-width: 735px;
+  float: right;
+}
+
+.gallery-map-container{
+  margin:10px 10px 5px;
+}
+.subtitle-gallery{
+  color: #fff;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+
+.newsletter-form form {
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container form.tnp-subscription{
+  margin:0 auto;
+}
+
+.newsletter-form #tnp-1{
+  width: 442px;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 1px solid #BDBDBD ;
+  padding: 0 20px;
+  margin-right:-30px;
+}
+
+.wp-block-tnp-minimal p{
+  font-size: 0.8em;
+  margin-top: -10px;
+}
+
+.wp-block-tnp-minimal strong{
+  font-size: 1.5em;
+  line-height:2;
+}
+
+.p-gallery{
+  padding-bottom: 15px;
+  padding-top: 18px;
+  font-weight: normal;
+}
+
+hr.division{
+  background-color: #000;
+  width: 80%;
+  height: 1px;
+  margin: 15px;
+}
+
+.container .wp-block-tnp-minimal{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+}
+
+.newsletter-form .tnp-subscription input.tnp-submit{
+  width: 125px;
+  height: 35px;
+  border-radius: 20px;
+  border: 1px solid #000;
+  padding: 0 15px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
