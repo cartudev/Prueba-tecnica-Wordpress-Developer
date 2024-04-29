@@ -30,6 +30,14 @@ h1, h2, h3, h4, h5, h6, div, p{
   font-family: "Roboto", sans-serif;
   font-style: normal;
 }
+/*
+  THIS DELETE ALL THE DEFAULT TITLES :)
+*/
+h1:is(.my-3){
+  display: none;
+}
+
+
 h1{
   font-size: 3.5em;
   font-weight: bold;
@@ -38,8 +46,11 @@ h2{
   font-weight: bold;
   font-size: 2.5em;
 }
+p .text{
+  font-weight:100;
+    
+}
 div{
-  font-weight: bold;
   font-size: 1rem;
 }
 .menu-principal{
@@ -426,6 +437,13 @@ hr.division{
     background-color: #f5f5f5;
 }
 
+.container .wp-block-tnp-minimal a{
+  width: fit-content;
+  margin: auto;
+  background-color: #f5f5f5;
+  text-decoration: none;
+}
+
 .newsletter-form .tnp-subscription input.tnp-submit{
   width: 125px;
   height: 35px;
@@ -436,3 +454,289 @@ hr.division{
   color: #000;
   font-weight: bold;
 }
+
+.btn-send-message{
+  border-radius: 20px;
+  border: 1px solid #000;
+  padding: 10px 35px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+
+.column-details{
+    display: flex;
+    justify-content: center;
+}
+
+.column-details details {
+  width:100%;
+  background-color: #000;
+  color: #fff;
+  margin: 26px;
+  border-radius: 24px;
+  border: 2px solid #000;
+  -webkit-box-shadow: inset 0px 0px 7px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 0px 7px 3px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 7px 3px rgba(0,0,0,0.75);
+}
+
+.column-details details summary {
+  background-color: #000;
+  color: #fff;
+  padding: 24px 40px;
+  list-style: none;
+}
+
+.column-details details summary::after {
+  content: '▼';
+  text-align: right;
+  direction: rtl;
+  float: right;
+}
+
+.column-details details p{
+  width:100%;
+  background-color: #fff;
+  color:#000;
+  padding:20px;
+}
+.myaccount-container{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: stretch;
+  width: 100%;
+  padding: 130px 0;
+}
+
+.myaccount-container hr{
+  width: 80%;
+  height: 1px;
+  background-color: #000;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.myaccount-card{
+  height: auto;
+  margin:30px;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 35%;
+  min-width: 320px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2); 
+  font-family: "Roboto", sans-serif;
+  justify-content: space-between;
+  padding: 0 32px;
+  ;
+}
+
+.myaccount-card form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.myaccount-card--title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 33px;
+}
+.myaccount-card button {
+  width: 250px;
+  height: 35px;
+  border-radius: 20px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 25px;
+}
+.inputs{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 0.9em;
+  line-height: 2;
+}
+.inputs p{
+  margin-top: 12px;
+}
+.inputs input{
+  width: 360px;
+  min-width: 250px;
+  height: 34px;
+  border: 1px solid #b5b5b5;
+  border-radius: 10px;
+}
+.inputs a:link{
+  color: #000;
+}
+
+
+
+
+/* 
+  SLIDER TEST
+*/
+/*
+.box {
+  width:100%;
+  overflow:hidden;
+  padding:0 10px
+}
+
+.card {
+  position: relative;
+  width: 480px;
+  min-height: 400px;
+  background: rgb(255, 255, 255);
+  box-shadow: 15px 15px 60px rgba(0, 0, 0, 0.01);
+  padding: 20px;
+  transform: translateX(-8px);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2); 
+}
+*/
+
+
+.box {
+  width:95%;
+  overflow:hidden;
+  transform: translateX(2.5%);
+}
+
+.card{
+  width: 300px;
+  margin:10px 0 50px;
+}
+.card a{
+  text-decoration: none;
+}
+.inside {
+  position: relative;
+  width: 92%;
+  padding: 10px;
+  min-height: 400px;
+  background: rgb(255, 255, 255);
+  transform: translateX(1px);
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2); 
+}
+
+.card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .top .userDetails {
+  display: flex;
+  align-items: center;
+}
+
+.card .top .userDetails .profile_img {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .top .userDetails h3 {
+  font-size: 16px;
+  color: #4d4d4d;
+  font-weight: 500;
+  line-height: 1em;
+}
+
+.card .top .userDetails h3 span {
+  font-size: 0.7em;
+}
+
+.imgBox {
+  position: relative;
+  width: 100%;
+  height: 426px;
+  margin: 10px 0 15px;
+}
+
+.buttons {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+}
+
+.buttons img {
+  max-width: 24px;
+  max-height: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.buttons .left img {
+  margin-right: 8px;;
+}
+
+.likes {
+  font-weight: 500;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #4d4d4d;
+}
+
+.message {
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #4d4d4d;
+}
+
+.message b {
+  color: #262626;
+}
+
+.settings:after {
+  content: '\2807';
+  font-size: 25px;
+  color: #4d4d4d;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+/* 
+  SLIDER TEST
+*/
+
