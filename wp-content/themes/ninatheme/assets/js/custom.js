@@ -1,8 +1,35 @@
 let search = document.querySelector(".search-field");
 search.placeholder = "Buscar";
 
+
+
 // tiny-slider
+
+
+
+
+
+
 try {
+
+  var slider2 = tns({
+    container: ".products-block-carousel",
+    items: 3.5,
+    fixedWidth: 240,
+    speed: 400,
+    slideBy: "3",
+    mouseDrag: true,
+    swipeAngle: false,
+    speed: 300,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayButtonOutput: false,
+    controls: false,
+    nav: false,
+    //    "edgePadding": 50,
+    "gutter": 25,
+  });
+
   var slider = tns({
     container: ".slider",
     items: 3.5,
@@ -21,6 +48,9 @@ try {
     //    "edgePadding": 50,
     //    "gutter": 50,
   });
+
+
+
 } catch (error) {}
 
 //whatsapp form
