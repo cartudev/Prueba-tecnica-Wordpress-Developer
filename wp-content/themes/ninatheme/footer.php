@@ -30,6 +30,10 @@
     <p>© 2022 Nina | Desarrollo por 25Watts | Todos los derechos reservado</p>
   </div>
 </footer>
+<script>
+var temaUrl = '<?php echo get_template_directory_uri(); ?>';
+console.log(temaUrl);
+</script>
 
 <?php wp_footer() ?>
 

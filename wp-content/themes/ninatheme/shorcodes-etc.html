@@ -159,17 +159,19 @@
     <div class="whatsapp-container" id="customer_login">
         <div class="whatsapp-card">
             <div class="card-image--container">
-                <img src="">
+                <img src="[theme_url_template]/assets/img/Whatsapp.jpg">
             </div>
-          <div class="myaccount-card--title">
-                <h3>CLIENTES NUEVOS</h3>
+          <div class="whatsapp-card-title">
+                <h3>CONTACTARSE POR WHATSAPP</h3>
                 <p>+54 9 351 2534082</p>
-              <hr>
           </div>
             <p>
-            <label for="username">Dirección de correo electrónico&nbsp;<span class="required">*</span></label></br>
-            <input type="text" class="" name="username" id="username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-            </p>
-          <button class="form-card--button">CREAR CUENTA</button>
+            <label for="message">Tu Mensaje<span class="required">*</span></label></br>
+            <div class='Fcontrol'>
+                <textarea id="message" name="message" required='required' placeholder="Escribe tu mensaje aqui"></textarea>  
+                <span class='valid' id='error_message'></span></div>
+          </p>
+          <button class="whatsapp-card-button" onclick='redirectToWhatsApp()'>CONTINUAR AL CHAT</button>
         </div>
     </div>
+

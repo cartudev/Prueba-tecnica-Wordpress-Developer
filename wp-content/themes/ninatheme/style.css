@@ -16,7 +16,7 @@ Tags:         e-commerce, two-columns, left-sidebar, right-sidebar, custom-backg
 
  *
  */
-*{
+ *{
   box-sizing: content-box;
   margin: 0;
   padding: 0;
@@ -65,24 +65,49 @@ div{
     list-style-type: none;
 }
 .menu-principal a, .menu-footer a{
+  display: flex;
   color: #fff;
   text-decoration: none;
-  padding: 5px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  height: 100%;
+  align-content: center;
+  align-items: center;
+}
+.menu-principal > li > a{
+  border-radius: 10px;
+  padding: 0 5px;
+}
 
-    text-transform: uppercase;
+.menu-principal > li > ul {
+  margin-top: 35px;
 }
-.sub-menu{
-  display: none;
+
+.sub-menu li ul {
+    list-style: none;
+    width: 100%;
+    position: relative;
+    display: flex;
+    width: 35vw;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
+
+.header-container--leftside ul li:hover ul {
+  align-items: center;
+  display: flex;
+}
+
 .header-container{
   height: 96px;
   width: 100%;
   position: fixed;
   top:0;
   z-index: 10;
-  background-color: black;
+  background-color: #000e;
   display: flex;
   align-items: center;
+  z-index: 11;
 }
 .header-container--leftside {
     width: 100%;
@@ -90,8 +115,216 @@ div{
     align-items: center;
     max-width: 850px;
     justify-content: flex-start;
+}
+
+
+/* .header-container--leftside ul li */
+/* ,.header-container--leftside */
+/* ,.nav-container */
+/* ,.container-menu */
+/* ,.menu-principal */
+/* { */
+  /* height: 100%; */
+/* } */
+.header-container--leftside ul ul{
+     display: none; 
+    /* position: relative; */
+    /* top: 50px; */
+  }
+.header-container--leftside ul li{
+  cursor: pointer;
+}
+/* .header-container--leftside ul li a { */
+  /* padding: 0 15px; */
+  /* transition: color 0.2s linear; */
+/* } */
+
+.header-container--leftside ul li:hover > a {
+  background-color: #fff;
+  color: #000;
+  /* height: 30px; */
+  /* border-radius: 15px; */
+  /* position: relative; */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  /* padding: 0 15px; */
+}
+
+.header-container--leftside ul .menu-products:hover > ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.header-container--leftside ul .menu-about-us:hover >ul{
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  flex-direction: row;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 0;
 
 }
+
+
+.header-container--leftside ul .menu-products:hover > ul > * {
+  width: 40%;
+  column-count: 2;
+  }
+
+  .header-container--leftside menu-principal li:hover > ul {
+    position: absolute;
+  z-index: 12;
+  /* cursor: default; */
+  display: flex;
+  /* grid-template-columns: 1fr 2fr; */
+  /* flex-flow: wrap; */
+  background-color: #fff;
+  color: #000;
+  list-style: none;
+  left: 0;
+  width: 100vw;
+  /* padding: 0; */
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header-container--leftside ul li:hover > ul > *{
+  /* grid-row: 1; */
+  width: fit-content;
+  background: white;
+  /* margin-bottom:10px; */
+  /* min-width:100%; */
+  /* word-break: break-all; */
+  /* border: ridge; */
+}
+
+.header-image--container img {
+  /* margin: 30px; */
+  border-radius: 50%;
+  width: 0;
+  height: fit-content;
+  flex-grow: 0.8;
+}
+.menu-about-us .header-image--container {
+  display: flex;
+  height: 100%;
+  position: relative;
+  /* padding-right: 20px; */
+  gap: 5%;
+  /* width: max-content; */
+  /* width: auto; */
+  /* flex-grow: inherit; */
+  /* max-width: 59dvw; */
+  justify-content: flex-start;
+  right: 0;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.menu-products .header-image--container {
+  display: flex;
+  height: 100%;
+  position: relative;
+  /* padding-right: 20px; */
+  gap: 5%;
+  width: 50vw;
+  /* width: max-content; */
+  /* width: auto; */
+  /* flex-grow: inherit; */
+  /* max-width: 59dvw; */
+  left: -60%;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+li#menu-item-596{
+      display: flex !important;
+    /* flex-direction: column; */
+    flex-wrap: nowrap;
+    /* height: 200px; */
+    /* align-items: flex-start; */
+    /* justify-content: space-between; */
+    /* position: relative;*/
+    
+}
+
+.header-container--leftside ul li:hover > ul > * {
+  width: fit-content;
+}
+
+.header-container--leftside ul li > ul::before { 
+  pointer-events: auto;
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  display:block;
+  width: 100%;
+  background-color: #0000;
+  height: 48px;
+ } 
+
+
+
+.header-container--leftside ul li > ul::before:hover {
+  display:block;
+  content: "";
+}
+
+.header-container--leftside ul li:hover> ul li a {
+  padding: 16px;
+  color: #000;
+  height: auto;
+  transform: none;
+  left: 10px;
+  font-weight: normal ;
+  font-size: 16px ;
+  text-transform: none;
+}
+
+
+/*testeando*/
+
+.header-container--leftside ul ul:hover:not(.sub-menu) {
+  position: absolute;
+  z-index: 12;
+  /* cursor: default; */
+  display: flex;
+  /* grid-template-columns: 1fr 2fr; */
+  /* flex-flow: wrap; */
+  background-color: #fff;
+  color: #000;
+  list-style: none;
+  left: 0;
+  width: 100vw;
+  /* padding: 0; */
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.menu-principal > .menu-about-us:hover ul li:not(.sub) {
+  width: 50%;
+}
+
+
+li > a:after { 
+  margin-left: 5px;
+  content:  '▼'; }
+li > a:only-child:after { content: ''; }
+
+
 .header-container--rightside {
 display: flex;
     flex: none;
@@ -113,6 +346,9 @@ display: flex;
 .nav-container{
 width: 100%;
 }
+
+
+
 /*
 .woocommerce-product-search{
 } */
@@ -383,6 +619,23 @@ width: 100%;
   padding: 5px 20px;
 }
 
+.gallery-home--container {
+  width: 95%;
+  display: flex !important;
+  height: 100%;
+  margin: 15px auto;
+}
+
+@media (max-width: 782px){
+  .gallery-home--container{
+    width: 95%;
+    display: block !important;
+    margin: 5px auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+}
+
 .newsletter-form form {
     display: flex !important;
     justify-content: center;
@@ -428,7 +681,7 @@ hr.division{
 }
 
 .container .wp-block-tnp-minimal{
-    width: 100%;
+    width: auto; /* test 100%*/
     height: 160px;
     display: flex;
     flex-direction: column;
@@ -520,7 +773,7 @@ hr.division{
   margin-bottom: 6px;
 }
 
-.myaccount-card{
+.myaccount-card, .whatsapp-card{
   height: auto;
   margin:30px;
   min-height: inherit;
@@ -538,6 +791,103 @@ hr.division{
   padding: 0 32px;
   ;
 }
+
+.whatsapp-card{
+  width: 50%;
+  border-radius: 30px;
+  min-width: fit-content;
+  margin: auto;}
+
+.whatsapp-card .card-image--container{
+  margin-top: 76px;
+  margin-bottom: 34px;
+
+}
+
+.whatsapp-card textarea{
+  width: 700px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #949494;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 18px;
+  max-width: 800px;
+  max-height: 300px;
+  min-width: 100px;
+}
+.whatsapp-card label{
+  font-size: 16;
+  font-weight: normal;
+  line-height: 3;
+}
+
+.whatsapp-card button{
+  background-color: #21E75D;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bolder;
+  width: 306px;
+  height: 57px;
+  border-radius: 30px;
+  border: none;
+  margin: 45px auto;
+}
+
+.whatsapp-card-title{
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 45px;
+}
+
+.whatsapp-card-title p{
+  text-align: center;
+  color: #A2A2A2;
+  font-size: 18px;
+}
+
+/* Validation whatssapp */
+.valid[data-text]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 12px;
+  content: "";
+  border: 8px solid;
+  border-color: transparent transparent #ffd91a transparent;
+  top: calc(100% - 21px);
+}
+.valid[data-text]:after,
+.valid[data-text]:before {
+  opacity: 1;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+.valid[data-text]:after {
+  transform: translateX(-50%) translateY(-105%);
+  content: attr(data-text);
+  position: absolute;
+  left: 50%;
+  top: inherit;
+  font-size: 12px;
+  padding: 0 5px;
+  box-shadow: 0 0px 6px 2px rgb(0 0 0 / 30%);
+  background-color: red;
+  color: white;
+}
+
+.show#message ~ .valid[data-text]:before,
+.none#message ~ .valid:after,
+.none#message ~ .valid[data-text]:before {
+  opacity: 0;
+}
+.Fcontrol .message {
+  top: -5px;
+}
+
+
+
 
 .myaccount-card form{
   display: flex;
@@ -590,6 +940,13 @@ hr.division{
   color: #000;
 }
 
+.whatsapp-container{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: stretch;
+  width: 100%;
+}
 
 
 
@@ -739,4 +1096,3 @@ align-items: center;
 /* 
   SLIDER TEST
 */
-
