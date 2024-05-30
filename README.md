@@ -1,3 +1,3 @@
-# Prueba-tecnica-Wordpress-Developer
-git de prueba tecnica para Wordpress Developer
+# WordPress - WooCommerce Theme
 
+A WordPress WooCommerce child theme based on Storefront, currently under development.
